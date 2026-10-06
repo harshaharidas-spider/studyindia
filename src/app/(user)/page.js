@@ -57,11 +57,12 @@ export default function HomePage() {
           <a className="logo" href="#"><img src="/logo.png" alt="IndiaStudyChannel Logo" style={{ maxHeight: '40px', width: 'auto' }} /></a>
           <div className={`menu ${menuOpen ? 'open' : ''}`} id="menu">
             <div className="mi"><a href="#">Education</a>
-              <div className="mega"><a href="#">Admissions</a><a href="#">Learn English</a><a href="#">Institutes</a><a href="#">Universities</a><a href="#">Colleges</a><a href="#">Courses</a><a href="#">Schools</a><a href="#">Practice Tests</a><a href="#">Study Abroad</a></div></div>
+              <div className="mega"><a href="#">Admissions</a><a href="#">Learn English</a><a href="#">Institutes</a><a href="#">Universities</a><a href="/colleges">Colleges</a><a href="#">Courses</a><a href="#">Schools</a><a href="#">Practice Tests</a><a href="#">Study Abroad</a></div></div>
             <div className="mi"><a className="kc" href="#">Knowledge Centre</a></div>
             <div className="mi"><a href="#">Forum</a></div>
+            <div className="mi"><a href="/contact">Contact</a></div>
             <div className="mi"><a href="#">More</a>
-              <div className="mega sm"><a href="#">Articles</a><a href="#">Ask Experts</a><a href="#">Jobs</a><a href="#">Reviews</a><a href="#">Study Abroad Consultants</a><a href="#">Social Hub</a><a href="#">New Posts</a><a href="#">Post Content</a></div></div>
+              <div className="mega sm"><a href="/about">About Us</a><a href="#">Articles</a><a href="#">Ask Experts</a><a href="#">Jobs</a><a href="#">Reviews</a><a href="#">Study Abroad Consultants</a><a href="#">Social Hub</a><a href="#">New Posts</a><a href="#">Post Content</a></div></div>
           </div>
           <div className="cta"><div className="sbtn" title="Search"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#17130F" strokeWidth="2.2"><circle cx="11" cy="11" r="7" /><path d="M20 20l-3.5-3.5" /></svg></div>
             <a className="login" href="#">Login</a><a className="reg" href="#">Register</a></div>
@@ -203,7 +204,7 @@ export default function HomePage() {
           <div><h4>Study abroad</h4><a href="#">Study in Germany</a><a href="#">Study in Italy</a><a href="#">Study in Ireland</a><a href="#">Study in France</a><a href="#">Study in Australia</a><a href="#">Study in New Zealand</a><a href="#">Indian Universities</a></div>
           <div><h4>Education</h4><a href="#">Distance MBA</a><a href="#">MBA in Bangalore</a><a href="#">MBBS in Mangalore</a><a href="#">BDS in Mangalore</a><a href="#">B Pharm in Mangalore</a><a href="#">MBA Digital Marketing</a><a href="#">Education Leads</a><a href="#">Advertise</a></div>
         </div>
-        <div className="fb"><span><a href="#">About Us</a><a href="#">Contact Us</a><a href="#">Copyright</a><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></span><span>Promoted by SpiderWorks Technologies, Kochi, India</span></div>
+        <div className="fb"><span><a href="/about">About Us</a><a href="/contact">Contact Us</a><a href="#">Copyright</a><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></span><span>Promoted by SpiderWorks Technologies, Kochi, India</span></div>
       </div></footer>
       
       <a className={`top ${showTop ? 'on' : ''}`} id="top" href="#" aria-label="Back to top">↑</a>
