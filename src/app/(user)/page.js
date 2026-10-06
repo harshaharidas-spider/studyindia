@@ -9,6 +9,16 @@ export default function HomePage() {
   const [activeTab, setActiveTab] = useState('Colleges');
   const [showTop, setShowTop] = useState(false);
 
+  const bgImages = ['/hero-bg.jpg', '/hero-bg-2.png', '/hero-bg-3.png'];
+  const [bgIndex, setBgIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setBgIndex(prev => (prev + 1) % bgImages.length);
+    }, 4500);
+    return () => clearInterval(timer);
+  }, []);
+
   useEffect(() => {
     const handleScroll = () => {
       setShowTop(window.scrollY > 600);
@@ -71,38 +81,20 @@ export default function HomePage() {
       </header>
 
       <main>
-        <section className="imgs"><div className="w">
-          <svg viewBox="0 0 1180 340" role="img" aria-label="Illustration of students walking towards a university hall" xmlns="http://www.w3.org/2000/svg">
-            <rect width="1180" height="340" fill="#FFF4EC" />
-            <circle cx="190" cy="92" r="50" fill="#FFD9BF" /><circle cx="190" cy="92" r="30" fill="#F26A1B" />
-            <g fill="#fff"><ellipse cx="450" cy="70" rx="46" ry="13" /><ellipse cx="480" cy="60" rx="26" ry="12" /><ellipse cx="770" cy="56" rx="50" ry="13" /><ellipse cx="800" cy="46" rx="26" ry="11" /><ellipse cx="960" cy="128" rx="38" ry="10" /></g>
-            <path d="M0 250 Q200 190 420 235 T860 222 T1180 240 V300 H0Z" fill="#FBE3D2" />
-            <g fill="#F7CDB0"><rect x="60" y="204" width="72" height="80" /><rect x="140" y="226" width="52" height="58" /><rect x="960" y="196" width="80" height="88" /><rect x="1048" y="224" width="60" height="60" /></g>
-            <g fill="#fff"><rect x="74" y="218" width="12" height="14" /><rect x="102" y="218" width="12" height="14" /><rect x="74" y="244" width="12" height="14" /><rect x="102" y="244" width="12" height="14" /><rect x="976" y="210" width="12" height="14" /><rect x="1004" y="210" width="12" height="14" /><rect x="976" y="238" width="12" height="14" /><rect x="1004" y="238" width="12" height="14" /></g>
-            <rect y="280" width="1180" height="60" fill="#F3D5BE" />
-            <path d="M470 280 L380 340 L800 340 L710 280Z" fill="#F7B98F" />
-            <g stroke="#17130F" strokeWidth="3" strokeLinejoin="round" strokeLinecap="round">
-              <rect x="350" y="205" width="90" height="75" fill="#fff" /><rect x="740" y="205" width="90" height="75" fill="#fff" />
-              <g fill="#FFD9BF" strokeWidth="2"><rect x="366" y="226" width="18" height="28" /><rect x="398" y="226" width="18" height="28" /><rect x="766" y="226" width="18" height="28" /><rect x="798" y="226" width="18" height="28" /></g>
-              <rect x="550" y="118" width="80" height="42" fill="#fff" />
-              <path d="M550 118 A40 40 0 0 1 630 118Z" fill="#F26A1B" />
-              <rect x="583" y="60" width="14" height="20" fill="#fff" /><line x1="590" y1="60" x2="590" y2="34" /><polygon points="590,34 616,42 590,50" fill="#17130F" />
-              <rect x="500" y="160" width="180" height="120" fill="#F26A1B" />
-              <polygon points="486,192 590,152 694,192" fill="#fff" />
-              <g fill="#fff" strokeWidth="2.5"><rect x="512" y="194" width="13" height="80" /><rect x="545" y="194" width="13" height="80" /><rect x="578" y="194" width="13" height="80" /><rect x="611" y="194" width="13" height="80" /><rect x="644" y="194" width="13" height="80" /></g>
-              <g fill="#fff" strokeWidth="2.5"><rect x="490" y="262" width="200" height="6" /><rect x="480" y="268" width="220" height="6" /><rect x="470" y="274" width="240" height="6" /></g>
-              <g><rect x="296" y="252" width="8" height="30" fill="#17130F" /><circle cx="300" cy="234" r="30" fill="#F26A1B" /><circle cx="286" cy="246" r="18" fill="#C94F0A" />
-                <rect x="876" y="252" width="8" height="30" fill="#17130F" /><circle cx="880" cy="234" r="30" fill="#C94F0A" /><circle cx="894" cy="246" r="18" fill="#F26A1B" /></g>
-              <g><circle cx="236" cy="252" r="10" fill="#FFD9BF" /><rect x="226" y="263" width="20" height="34" rx="7" fill="#17130F" /><rect x="245" y="267" width="9" height="22" rx="3" fill="#F26A1B" /><line x1="232" y1="297" x2="230" y2="316" /><line x1="241" y1="297" x2="244" y2="316" />
-                <circle cx="272" cy="258" r="9" fill="#FFD9BF" /><rect x="263" y="268" width="18" height="30" rx="6" fill="#F26A1B" /><line x1="268" y1="298" x2="266" y2="314" /><line x1="277" y1="298" x2="280" y2="314" />
-                <circle cx="900" cy="254" r="10" fill="#FFD9BF" /><rect x="890" y="265" width="20" height="34" rx="7" fill="#F26A1B" /><rect x="903" y="276" width="14" height="10" rx="1" fill="#fff" strokeWidth="2" /><line x1="896" y1="299" x2="894" y2="318" /><line x1="905" y1="299" x2="908" y2="318" />
-                <circle cx="938" cy="260" r="9" fill="#FFD9BF" /><rect x="929" y="270" width="18" height="30" rx="6" fill="#17130F" /><line x1="934" y1="300" x2="932" y2="316" /><line x1="943" y1="300" x2="946" y2="316" /></g>
-              <g><polygon points="1030,88 1076,70 1122,88 1076,106" fill="#17130F" /><path d="M1052,98 v16 q24 12 48 0 v-16" fill="#17130F" /><line x1="1122" y1="88" x2="1122" y2="116" stroke="#F26A1B" strokeWidth="4" /></g>
-              <g fill="#fff"><path d="M84 70 q22-10 44 0 v30 q-22-10-44 0Z" /><path d="M128 70 q22-10 44 0 v30 q-22-10-44 0Z" /></g>
-            </g>
-            <g fill="#F26A1B"><circle cx="330" cy="120" r="4" /><circle cx="700" cy="100" r="3" /><circle cx="1000" cy="60" r="4" /><circle cx="60" cy="150" r="3" /></g>
-          </svg>
-        </div></section>
+        <section className="imgs">
+          <div className="w">
+            <div style={{ position: 'relative', overflow: 'hidden', height: '480px', width: '100%' }}>
+              {bgImages.map((src, i) => (
+                <div key={src} style={{
+                  position: 'absolute', inset: 0,
+                  background: `url(${src}) center/cover no-repeat`,
+                  opacity: i === bgIndex ? 1 : 0,
+                  transition: 'opacity 1.5s ease-in-out'
+                }}></div>
+              ))}
+            </div>
+          </div>
+        </section>
 
         <section className="hero"><div className="w hg">
           <div>

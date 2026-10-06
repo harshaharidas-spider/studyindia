@@ -116,9 +116,9 @@ export default function CollegeDetailPage({ params }) {
         .clabel{ font-size: .76rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; }
         .cmuted{ color: var(--mute); }
         
-        .hero{ position: relative; overflow: hidden; background: #fff; padding-bottom: 40px; }
-        .hero::before{ content:""; position:absolute; inset:0; background: radial-gradient(620px circle at 70% 20%, rgba(242,106,27,.15), transparent 62%); pointer-events:none; }
-        .hero::after{ content:""; position:absolute; inset:0; background-image: linear-gradient(rgba(22,17,14,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(22,17,14,.04) 1px, transparent 1px); background-size: 56px 56px; mask-image: radial-gradient(ellipse at 70% 20%, #000 10%, transparent 72%); pointer-events:none; }
+        .hero{ position: relative; overflow: hidden; background: url('/hero-college.png') center 30%/cover no-repeat; padding-bottom: 40px; }
+        .hero::before{ content:""; position:absolute; inset:0; background: linear-gradient(90deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 45%, rgba(255,255,255,0) 100%); pointer-events:none; }
+        .hero .w{ position: relative; z-index: 2; }
         
         .crumbs{ padding: 22px 0 0; font-size: .9rem; color: var(--mute); }
         .crumbs a:hover{ color: var(--o); } .crumbs span{ margin: 0 6px; opacity: .5; }

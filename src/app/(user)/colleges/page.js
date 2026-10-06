@@ -204,7 +204,7 @@ export default function CollegesDirectory() {
   return (
     <>
       <style dangerouslySetInnerHTML={{__html: `
-        .dmain { max-width: 1180px; margin: 0 auto; padding: 56px 28px 88px; }
+        .dmain { max-width: 1405px; margin: 0 auto; padding: 56px 32px 88px; }
         .dmain h1 { font-size: clamp(2.2rem, 5.5vw, 4rem); line-height: 1.05; letter-spacing: -0.035em; font-weight: 700; margin: 0 0 22px; }
         .dmain h1 em { font-style: normal; color: var(--o); }
         .dlead { font-size: 1.25rem; line-height: 1.65; color: var(--mute); max-width: 34em; margin: 0 0 36px; }
